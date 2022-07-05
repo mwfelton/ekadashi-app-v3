@@ -2,7 +2,7 @@ import React from "react";
 import styled from 'styled-components/native'
 import { StatusBar, SafeAreaView, Text, View } from "react-native";
 
-import EkadashiDate from '../../landing/components/landing-page.component';
+import EkadashiDate from '../components/ekadashi-countdown.component';
 
 const AreaView = styled(SafeAreaView)`
     flex: 1;

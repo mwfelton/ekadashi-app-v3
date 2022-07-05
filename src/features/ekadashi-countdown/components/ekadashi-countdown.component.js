@@ -2,7 +2,6 @@ import React from "react";
 const moment = require('moment');
 import { Image, Text } from "react-native";
 import { Card, Title, Paragraph } from 'react-native-paper';
-import { SVGImage } from 'react-native-svg';
 
 import styled from 'styled-components/native'
 
@@ -40,20 +39,17 @@ const countDownFunction = (ekadashiDay) => {
 const daysToGo = countDownFunction(nearestDate)
 
 const ekadashiIndex = dateArray.indexOf(nearestDate)
-const ekaImage = ekaData[ekadashiIndex].image
+const ekaMoonPhase = ekaData[ekadashiIndex].moonPhase
+const ekaType = ekaData[ekadashiIndex].type
 
 const EkadashiDate = () => {
     return (
         <>
         <Card>
           <Text> The next Ekadashi is in {daysToGo} days</Text>
-          <Text> TEST</Text>
           <Text>{nearestDate}</Text>
-          <SVGImage
-            width="100%"
-            height="100%"
-            uri={ekaImage}
-          />
+          <Text>{ekaMoonPhase}</Text>
+          <Text>{ekaType}</Text>
         </Card>
         </>
     )}
