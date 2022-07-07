@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 const moment = require('moment');
 import { Image, Text } from "react-native";
 import { Card, Title, Paragraph } from 'react-native-paper';
-
+import { EkadashiContext } from "../../../services/ekadashi.context";
 import styled from 'styled-components/native'
 
 import ekaData from '../../../ekadashi-2022.json'
@@ -43,8 +43,15 @@ const ekaMoonPhase = ekaData[ekadashiIndex].moonPhase
 const ekaType = ekaData[ekadashiIndex].type
 
 const EkadashiDate = () => {
+    const ekadashiContext = useContext(EkadashiContext)
     return (
         <>
+        <Card>
+          <Text> The next Ekadashi is in {daysToGo} days</Text>
+          <Text>{nearestDate}</Text>
+          <Text>{ekaMoonPhase}</Text>
+          <Text>{ekaType}</Text>
+        </Card>
         <Card>
           <Text> The next Ekadashi is in {daysToGo} days</Text>
           <Text>{nearestDate}</Text>

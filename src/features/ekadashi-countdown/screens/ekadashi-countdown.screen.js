@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from 'styled-components/native'
 import { StatusBar, SafeAreaView, Text, View } from "react-native";
-
+import { EkadashiContext } from "../../../services/ekadashi.context";
 import EkadashiDate from '../components/ekadashi-countdown.component';
 
 const AreaView = styled(SafeAreaView)`
@@ -18,11 +18,14 @@ const ScreenView = styled(View)`
   background:lightblue;
 `;
 
-export const LandingScreen = () => (
-  <AreaView>
-    <ScreenView>
-      <Title>EKADASHI APP</Title>
-      <EkadashiDate />
-    </ScreenView>
-  </AreaView>
-);
+export const LandingScreen = () => {
+  const ekadashiContext = useContext(EkadashiContext)
+  return (
+    <AreaView>
+      <ScreenView>
+        <Title>EKADASHI APP</Title>
+        <EkadashiDate />
+      </ScreenView>
+    </AreaView>
+  ) 
+};
