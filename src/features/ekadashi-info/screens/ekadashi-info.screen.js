@@ -1,14 +1,14 @@
 import React from "react";
 import styled from 'styled-components/native'
-import { StatusBar, SafeAreaView, Text, View } from "react-native";
+import { SafeAreaView, Text, View } from "react-native";
 
-import EkadashiDate from '../../landing/components/landing-page.component';
+import EkadashiDate from '../components/ekadashi-info.component';
 
 const AreaView = styled(SafeAreaView)`
     flex: 1;
 `;
 
-const Title = styled.Text`
+const Title = styled(Text)`
   color:pink;
   font-size:50px;
 `;
@@ -18,7 +18,7 @@ const ScreenView = styled(View)`
   background:lightblue;
 `;
 
-export const LandingScreen = () => (
+export const EkadashiInfoScreen = () => (
   <AreaView>
     <ScreenView>
       <Title>EKADASHI APP</Title>
