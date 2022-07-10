@@ -1,8 +1,11 @@
 import React from "react";
 import styled from 'styled-components/native'
-import { SafeAreaView, Text, View } from "react-native";
+import { SafeAreaView, Text, View, Button } from "react-native";
 
-import EkadashiDate from '../components/ekadashi-info.component';
+import LoginScreen from "../login.screen";
+
+
+import EkadashiDate from './ekadashi-home.component';
 
 const AreaView = styled(SafeAreaView)`
     flex: 1;
@@ -18,11 +21,15 @@ const ScreenView = styled(View)`
   background:lightblue;
 `;
 
-export const EkadashiInfoScreen = () => (
+export const EkadashiInfoScreen = ({ navigation }) => (
   <AreaView>
     <ScreenView>
       <Title>EKADASHI APP</Title>
       <EkadashiDate />
+      <Button
+        title='Login'
+        onPress={() => navigation.navigate("Login-screen")}
+     />
     </ScreenView>
   </AreaView>
 );

@@ -3,7 +3,7 @@ const moment = require('moment');
 import { Image, Text } from "react-native";
 import { Card, Title, Paragraph } from 'react-native-paper';
 
-import ekaData from '../../../ekadashi-2022.json'
+import ekaData from '../../ekadashi-2022.json'
 
 let dateArray = []
 ekaData.map(day => {dateArray.push(day.date)})
@@ -54,36 +54,3 @@ const EkadashiDate = () => {
     )}
 
 export default EkadashiDate;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// FINALLY RENDERED ALL ARRAY ITEMS
-
-// const EkadashiDate = () => {
-//   return (
-//       <>
-//       <Card>
-//           {ekadashi.map((data) => {
-//             return (
-//               <Paragraph>{data.date}</Paragraph>
-//             );
-//           })}
-//            </Card>
-//       </>
-//   )}
-
-// export default EkadashiDate;
